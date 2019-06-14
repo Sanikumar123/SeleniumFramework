@@ -34,7 +34,7 @@ public class BankManagerLogin extends BaseTest {
 		DriverManager.getDriver().findElement(By.xpath("//button[@ng-click='addCust()']")).click();
 		DriverManager.getDriver().findElement(By.xpath("//input[@ng-model='fName']")).sendKeys(data.get("Username"));
 		DriverManager.getDriver().findElement(By.xpath("//input[@ng-model='lName']")).sendKeys(data.get("Password"));
-		logInfo("Username and Password Entered!!!");
+		logInfo("Username and Password Entered!");
 		DriverManager.getDriver().findElement(By.xpath("//input[@ng-model='postCd']")).sendKeys(data.get("Postcode"));
 		DriverManager.getDriver().findElement(By.xpath("//button[@type='submit' and contains(text(),'Add Customer')]")).click();
 		Alert alert = DriverManager.getDriver().switchTo().alert();
