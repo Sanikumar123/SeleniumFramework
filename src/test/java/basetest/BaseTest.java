@@ -25,7 +25,7 @@ public class BaseTest {
 	private static FileInputStream fin;
 	private static Properties prop= new Properties();;
 	private static WebDriver driver;
-	public static boolean gridStatus=false;
+	public static boolean grid=false;
 	
 	@BeforeSuite
 	public void setUp()
@@ -69,9 +69,9 @@ public class BaseTest {
 		
 		if(System.getenv("Execution Type")!=null && System.getenv("Execution Type").equals("Grid"))
 		{
-			gridStatus=true;
+			grid=true;
 		}
-		DriverFactory.setRemote(gridStatus);
+		DriverFactory.setRemote(grid);
 		
 		if(DriverFactory.isRemote())
 		{
